@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "description": "Design system for freehire's web frontend — tokens, primitives, Storybook, docs.",
+  "description": "Design system for freehire's web frontend \u2014 tokens, primitives, Storybook, docs.",
   "packageManager": "pnpm@11.7.0",
   "exports": {
     "./dist/*": "./dist/*",
@@ -16,7 +16,7 @@
     "./*": "./src/*"
   },
   "scripts": {
-    "build": "pnpm tokens:build",
+    "build": "node init && pnpm tokens:build",
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "test": "vitest run",
     "lint": "oxlint && eslint .",
@@ -27,7 +27,7 @@
     "check:adoption": "node scripts/check-adoption.mjs",
     "check:dist": "pnpm build && git diff --exit-code -- dist",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "node init && storybook build"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

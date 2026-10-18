@@ -5,8 +5,8 @@
   "version": "0.1.6",
   "type": "module",
   "scripts": {
-    "dev": "wxt",
-    "build": "wxt build",
+    "dev": "node init && wxt",
+    "build": "node init && wxt build",
     "zip": "WXT_RELEASE=1 wxt zip",
     "test": "vitest run",
     "check": "svelte-check --tsconfig ./tsconfig.json",

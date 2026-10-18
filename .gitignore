@@ -146,15 +146,12 @@ hire
 # yet, in a directory nobody has created yet — and `!.env.production` would re-admit a
 # future service's production env, which is the one file in this whole block most likely to
 # hold a live credential. Default-deny only holds if the exceptions cannot spread.
-.env
-.env.*
 !/.env.example
 !/web/.env.example
 !/extension/.env.production
 
 # IDE / OS
 .idea/
-.vscode/
 .DS_Store
 
 # Claude Code local settings
@@ -263,3 +260,7 @@ extension/*.zip
 # cmd/harvest-boards, regenerated from the live boards table + whatever aggregator/query ran.
 # Not the catalog's own record (that's `boards`, written by cmd/harvest-boards --apply).
 /scripts/.harvest-seeds/
+branch_structure.json
+temp_auto_push.bat
+temp_interactive_push.bat
+config.bat
